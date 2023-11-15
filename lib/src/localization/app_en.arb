@@ -1,6 +1,6 @@
 {
-  "appTitle": "ai_tarot",
-  "@appTitle": {
-    "description": "The title of the application"
-  }
+  "@@locale": "en",
+  "appTitle": "AI Tarot",
+  "welcomeMessage": "Welcome to the Tarot AI, where ancient wisdom meets modern AI. Unveil the secrets of the cosmos with our tarot readings.",
+  "welcomeButtonLabel": "Let the mystic journey begin!"
 }

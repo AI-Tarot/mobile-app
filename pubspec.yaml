@@ -27,18 +27,18 @@ flutter:
   # Enable generation of localized Strings from arb files.
   generate: true
 
-  assets:
-    # Add assets from the images directory to the application.
-    - assets/images/
+  # assets:
+  #   # Add assets from the images directory to the application.
+  #   - assets/images/
 
   fonts:
     - family: Lora
       fonts:
-        - asset: assets/fonts/Lora-Regular.ttf
-        - asset: assets/fonts/Lora-Bold.ttf
+        - asset: fonts/Lora-Regular.ttf
+        - asset: fonts/Lora-Bold.ttf
           weight: 700
-        - asset: assets/fonts/Lora-Italic.ttf
+        - asset: fonts/Lora-Italic.ttf
           style: italic
-        - asset: assets/fonts/Lora-BoldItalic.ttf
+        - asset: fonts/Lora-BoldItalic.ttf
           weight: 700
           style: italic

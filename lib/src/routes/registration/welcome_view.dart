@@ -1,33 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'package:ai_tarot/src/components/step_button.dart';
 
 class WelcomeView extends StatelessWidget {
+  final routeName = '/registration/welcome';
+
   const WelcomeView({
     Key? key,
   }) : super(key: key);
 
-  final routeName = '/registration/welcome';
-
   @override
   Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context)!;
+
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 8, right: 8, top: 0, bottom: 24),
+        padding:
+            const EdgeInsets.only(left: 24, right: 24, top: 100, bottom: 54),
         child: Flex(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           direction: Axis.vertical,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const SizedBox(height: 0),
-            const Text(
-              'Welcome to the Tarot AI, where ancient wisdom meets modern AI. Unveil the secrets of the cosmos with our tarot readings.',
-              style: TextStyle(fontSize: 24, fontFamily: 'Lora'),
+            Text(
+              t.welcomeMessage,
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
               textAlign: TextAlign.center,
             ),
-            ElevatedButton(
+            StepButton(
               onPressed: () {
-                // TODO: Navigate to the next screen
+                Navigator.pushNamed(context, '/registration/goals');
               },
-              child: const Text('Let the mystic journey begin!'),
+              label: t.welcomeButtonLabel,
             ),
           ],
         ),
